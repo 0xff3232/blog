@@ -1,0 +1,44 @@
+package layout
+
+templ Base() {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic HTML Template</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>About</h2>
+            <p style="color: red;">This is a paragraph about the website or the page content.</p>
+			<p> This is from the base layout { children... } </p>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <p>You can contact us at <a href="mailto:info@example.com">info@example.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Website</p>
+    </footer>
+
+    <script>
+        // Add your JavaScript here
+    </script>
+</body>
+</html>
+}

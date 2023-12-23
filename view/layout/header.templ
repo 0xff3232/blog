@@ -1,0 +1,79 @@
+package layout
+
+templ Header() {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Your Website Title</title>
+    <style>
+        /* Basic styling for the header */
+        header {
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #e7e7e7;
+            padding: 10px 0;
+        }
+
+        /* Container to constrain the content width */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: auto;
+        }
+
+        /* Navigation styling */
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Logo or Brand styling */
+        .logo {
+            float: left;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                Your Logo
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Your page content goes here -->
+	<p> { children... } </p>
+
+</body>
+</html>
+}

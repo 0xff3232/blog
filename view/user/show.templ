@@ -1,0 +1,12 @@
+package user
+
+import (
+	"github.com/0xff3232/blog/view/layout"
+	"github.com/0xff3232/blog/model"
+)
+
+templ Show(user model.User) {
+	@layout.Header() {
+		<h1>Hello {user.Name} from the user email: {user.Email}</h1>
+	}
+}

@@ -1,0 +1,5 @@
+/html
+
+# Ignore Templ generated Go files
+view/user/*_templ.go
+view/layout/*_templ.go
