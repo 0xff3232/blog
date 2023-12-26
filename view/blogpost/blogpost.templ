@@ -1,0 +1,11 @@
+package blogpost
+
+import (
+    "github.com/0xff3232/blog/view/layout"
+)
+
+templ BlogPost(htmlContent string) {
+    @layout.Header() {
+		@templ.Raw(htmlContent) 
+    }
+}

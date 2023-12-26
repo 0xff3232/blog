@@ -20,6 +20,46 @@ templ Header() {
             overflow: auto;
         }
 
+		    /* Improved content container styling */
+		.content-container {
+    	    text-align: left; /* Most of the text in articles is better left-aligned */
+    	    width: 80%;
+    	    max-width: 800px;
+    	    margin: 0 auto;
+    	    padding: 20px;
+    	    line-height: 1.6; /* Improving line height for readability */
+    	    font-size: 18px; /* Adjust font size as needed */
+    	}
+
+    	/* Styling for code blocks */
+    	pre {
+    	    background-color: #f4f4f4;
+    	    border: 1px solid #ddd;
+    	    padding: 10px;
+    	    border-radius: 4px;
+			overflow-x: auto;
+			font-size: 14px; 
+			line-height: 1.4;
+    	}
+
+    	/* Responsive design adjustments */
+    	@media (max-width: 768px) {
+    	    .container, .content-container {
+    	        width: 95%;
+    	    }
+
+    	    nav ul li {
+    	        display: block;
+    	        margin: 5px 0;
+    	    }
+
+    	    .logo, nav {
+    	        float: none;
+    	        text-align: center;
+    	    }
+    	}
+
+
         /* Navigation styling */
         nav {
             float: right;
@@ -71,8 +111,11 @@ templ Header() {
         </div>
     </header>
 
-    <!-- Your page content goes here -->
-	<p> { children... } </p>
+    <main>
+        <div class="content-container">
+            { children... }
+        </div>
+    </main>
 
 </body>
 </html>
