@@ -4,101 +4,185 @@ templ Header() {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Your Website Title</title>
-    <style>
-        /* Basic styling for the header */
-        header {
-            background-color: #f8f8f8;
-            border-bottom: 1px solid #e7e7e7;
-            padding: 10px 0;
-        }
+    <title>Choccy Blog</title>
+	<style>
+    /* Base styling */
+    body {
+        background-color: #0d1117; /* GitHub dark background */
+        color: #c9d1d9; /* GitHub light text color */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    }
 
-        /* Container to constrain the content width */
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            overflow: auto;
-        }
+    /* Styling for the header */
+    header {
+        background-color: #161b22; /* Darker background for the header */
+        border-bottom: 1px solid #30363d; /* Border color for dark theme */
+        padding: 10px 0;
+    }
 
-		    /* Improved content container styling */
-		.content-container {
-    	    text-align: left; /* Most of the text in articles is better left-aligned */
-    	    width: 80%;
-    	    max-width: 800px;
-    	    margin: 0 auto;
-    	    padding: 20px;
-    	    line-height: 1.6; /* Improving line height for readability */
-    	    font-size: 18px; /* Adjust font size as needed */
-    	}
+    /* Container to constrain the content width */
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        overflow: auto;
+    }
 
-    	/* Styling for code blocks */
-    	pre {
-    	    background-color: #f4f4f4;
-    	    border: 1px solid #ddd;
-    	    padding: 10px;
-    	    border-radius: 4px;
-			overflow-x: auto;
-			font-size: 14px; 
-			line-height: 1.4;
-    	}
+    /* Improved content container styling */
+    .content-container {
+        text-align: left;
+        width: 80%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        line-height: 1.6;
+        font-size: 18px;
+    }
 
-    	/* Responsive design adjustments */
-    	@media (max-width: 768px) {
-    	    .container, .content-container {
-    	        width: 95%;
-    	    }
+    /* Style for inline code blocks */
+    code {
+        background-color: #21262d; /* Slightly lighter background for inline code */
+        color: #c9d1d9; /* Light text color for inline code */
+        padding: 2px 4px;
+        border-radius: 6px;
+        font-family: monospace;
+    }
 
-    	    nav ul li {
-    	        display: block;
-    	        margin: 5px 0;
-    	    }
+    /* Style for code blocks */
+    pre {
+        background-color: #21262d; /* Slightly lighter background for block code */
+        color: #c9d1d9; /* Light text color for block code */
+        padding: 16px;
+        border-radius: 6px;
+        overflow-x: auto;
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    }
 
-    	    .logo, nav {
-    	        float: none;
-    	        text-align: center;
-    	    }
-    	}
+	pre code {
+		display: block;
+    	overflow-x: auto;
+    	padding: 1em;
+    	color: #c9d1d9;
+    	background: #0d1117;
+    	font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    	border-radius: 6px;
+	}
+
+	/* Navigation styling */
+    nav {
+        float: right;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #58a6ff; /* GitHub blue color for links */
+        font-weight: bold;
+    }
+
+    /* Style for visited links */
+    nav ul li a:visited {
+        color: #FFF9C4; /* Light yellow pastel for visited links */
+    }
+
+    nav ul li a:hover {
+        color: #1f6feb; /* GitHub hover color for links */
+        text-decoration: underline;
+    }
 
 
-        /* Navigation styling */
-        nav {
-            float: right;
-        }
+    /* Logo or Brand styling */
+    .logo {
+        float: left;
+        font-size: 20px;
+        font-weight: bold;
+        color: #c9d1d9; /* Light text color for logo */
+    }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+	/* Style for all links */
+    a {
+        text-decoration: none;
+        color: #58a6ff; /* GitHub blue color for links */
+        font-weight: bold;
+    }
+
+    a:visited {
+        color: #FFF9C4; /* Light yellow pastel for visited links */
+    }
+
+    a:hover {
+        color: #1f6feb; /* GitHub hover color for links */
+        text-decoration: underline;
+    }
+
+	
+
+    /* Headings */
+    h1 {
+        font-size: 2em;
+        color: #58a6ff; /* GitHub blue for h1 */
+        margin-bottom: 0.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        color: #1f6feb; /* A different shade of blue for h2 */
+        margin-bottom: 0.5em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+        color: #8b949e; /* Grey color for h3 */
+        margin-bottom: 0.5em;
+    }
+
+    h4 {
+        font-size: 1em;
+        color: #8b949e; /* Same grey for h4 */
+    }
+
+    h5 {
+        font-size: 0.875em;
+        color: #8b949e; /* Same grey for h5 */
+    }
+
+    h6 {
+        font-size: 0.85em;
+        color: #8b949e; /* Same grey for h6 */
+    }
+
+    /* Responsive design adjustments */
+    @media (max-width: 768px) {
+        .container, .content-container {
+            width: 95%;
         }
 
         nav ul li {
-            display: inline;
-            margin-left: 20px;
+            display: block;
+            margin: 5px 0;
         }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
+        .logo, nav {
+            float: none;
+            text-align: center;
         }
-
-        nav ul li a:hover {
-            color: #007bff;
-        }
-
-        /* Logo or Brand styling */
-        .logo {
-            float: left;
-            font-size: 20px;
-            font-weight: bold;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                Your Logo
+                Choccy
             </div>
             <nav>
                 <ul>
@@ -116,7 +200,6 @@ templ Header() {
             { children... }
         </div>
     </main>
-
 </body>
 </html>
 }
